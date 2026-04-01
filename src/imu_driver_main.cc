@@ -1,6 +1,5 @@
 #include "yahboom_imu_ros2/yahboom_driver.h"
 
-#include <iostream>
 #include <cstdio>
 #include <csignal>
 #include <chrono>
