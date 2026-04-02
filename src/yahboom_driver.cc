@@ -138,10 +138,10 @@ Quaternion IMU::getQuaternion(void) {
     Quaternion quat;
     const float factor = 1.f / 32768.f;
     ResponseData data = this->readRegister(IMURegister::QUAT_0);
-    s_quat.getX() = data.at(0);
-    s_quat.getY() = data.at(1);
-    s_quat.getZ() = data.at(2);
-    s_quat.getW() = data.at(3);
+    s_quat.getW() = data.at(0);
+    s_quat.getX() = data.at(1);
+    s_quat.getY() = data.at(2);
+    s_quat.getZ() = data.at(3);
     convertScaledQuaternion(&s_quat, factor, &quat);
     return quat;
   }

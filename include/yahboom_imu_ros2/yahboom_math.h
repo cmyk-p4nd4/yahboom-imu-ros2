@@ -86,16 +86,16 @@ struct YB_EXPORT Quaternion {
   Quaternion(float x, float y, float z, float w);
 
   constexpr float& getX() {
-    return this->data[0];
-  }
-  constexpr float& getY() {
     return this->data[1];
   }
-  constexpr float& getZ() {
+  constexpr float& getY() {
     return this->data[2];
   }
-  constexpr float& getW() {
+  constexpr float& getZ() {
     return this->data[3];
+  }
+  constexpr float& getW() {
+    return this->data[0];
   }
 
   float data[4];
