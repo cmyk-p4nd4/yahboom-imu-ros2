@@ -58,12 +58,15 @@ public:
   void setAlgorithm(IMUAlgorithm algo);
 
   // --- Bias and Calibration Settings ---
+
   void setAccelerationBias(const Vector3& offset, const uint8_t mask = 0xF);
   Vector3 getAccelerationBias(void);
   void setAngularVelocityBias(const Vector3& offset, const uint8_t mask = 0xF);
   Vector3 getAngularVelocityBias(void);
   void setMagneticFieldBias(const Vector3& offset, const uint8_t mask = 0xF);
   Vector3 getMagneticFieldBias(void);
+
+  // =================================
 
   // --- Alarms & Thresholds ---
   void setXAxisAlarmThreshold(float min_angle, float max_angle);
